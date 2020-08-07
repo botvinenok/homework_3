@@ -5,9 +5,9 @@ public class Runner {
     //variables for Cycles
     private static final int FromNumCycles = 10;
     private static final int ToNumCycles = 20;
-    private static final int [] Array = {10,11,12,13,14,15,16,17,18,19,20};
+    private static final int[] Array = new int[]{10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
-    //variables for Dividing
+    //variables for Divide
     private static final int FromNumDivide = 1;
     private static final int ToNumDivide = 100;
     private static final int Divider = 3;
@@ -18,25 +18,26 @@ public class Runner {
     private static final int ThirdArg = 3;
     private static final int FourthArg = -8;
 
+    public Runner() {
+    }
+
     public static void main(String[] args) {
 
         //region Cycles
         System.out.print("Results from cycles: \n");
-
-        Tasks_Cycles.cycleFor(FromNumCycles, ToNumCycles);
-        Tasks_Cycles.cycleWhile(FromNumCycles, ToNumCycles);
-        Tasks_Cycles.cycleDoWhile(FromNumCycles, ToNumCycles);
+        Tasks_Cycles.cycleFor(10, 20);
+        Tasks_Cycles.cycleWhile(10, 20);
+        Tasks_Cycles.cycleDoWhile(10, 20);
         Tasks_Cycles.cycleForEach(Array);
         //endregion
 
-        //region Division
-        Tasks_Divided.printWithoutReminder(FromNumDivide, ToNumDivide, Divider);
+        //region Divide
+        Tasks_Divided.printWithoutReminder(1, 100, 3);
         //endregion
 
         //region Calculating
-        int minimum = Tasks_Calculating.minAll(FirstArg, SecondArg, ThirdArg, FourthArg);
+        int minimum = Tasks_Calculating.minAll(1888888, 100, 3, -8);
         System.out.println("And minimum is: " + minimum + ". \n");
         //endregion
-
     }
 }
