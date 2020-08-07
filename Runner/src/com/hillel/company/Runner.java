@@ -1,5 +1,7 @@
 package com.hillel.company;
 
+import java.lang.reflect.Field;
+
 public class Runner {
 
     //variables for Cycles
@@ -17,6 +19,16 @@ public class Runner {
     private static final int SecondArg = 100;
     private static final int ThirdArg = 3;
     private static final int FourthArg = -8;
+
+    //variables for Lesson1
+    private static final String FieldString = "Hello. Lets do smth!";
+    private static final int Counter = 5;
+    private static final int Height = 5;
+    private static final int Width = 10;
+    private static final int FirstElFix = 5;
+    private static final int SecondElFix = 10;
+    private static final int[] ArrayCharIndex = {72,101,108,108,111,32,119,111,114,108,100};
+
 
     public Runner() {
     }
@@ -38,6 +50,25 @@ public class Runner {
         //region Calculating
         int minimum = Tasks_Calculating.minAll(1888888, 100, 3, -8);
         System.out.println("And minimum is: " + minimum + ". \n");
+        //endregion
+
+
+        //region Tasks_Lesson1
+        Tasks_Lesson1.printString(5, FieldString);
+        Tasks_Lesson1.initPrimitive();
+
+        System.out.println("\nSquare of rectangle :" + Tasks_Lesson1.calculateSquare(Height, Width));
+        Tasks_Lesson1.fixExample(5, 10);
+        Tasks_Lesson1.fixExample2(1,3,9,27);
+
+        System.out.print("\n");
+        Tasks_Lesson1.happyLearning();
+
+        System.out.print("\n");
+        Tasks_Lesson1.example3();
+
+        System.out.print("\n");
+        Tasks_Lesson1.printList(Tasks_Lesson1.transformIntToChar(ArrayCharIndex));
         //endregion
     }
 }
